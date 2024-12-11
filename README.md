@@ -1,4 +1,3 @@
-
 # Hotel Reservation System
 
 The **Hotel Reservation System** is a command-line application designed to manage hotel room availability and bookings. This tool enables users to query room availability and search for open slots over a specified date range.
@@ -16,8 +15,9 @@ The **Hotel Reservation System** is a command-line application designed to manag
 ## Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/moontech69/hotel-reservation-system.git
    cd hotel-reservation-system
    ```
 
@@ -37,11 +37,15 @@ myapp --hotels data/hotels.json --bookings data/bookings.json
 ```
 
 ### Commands
+
 1. **Check Availability**
+
    ```bash
    Availability(hotelId, date, roomType)
    ```
+
    Example:
+
    ```bash
    Availability(H1, 20240901, SGL)
    ```
@@ -60,7 +64,9 @@ myapp --hotels data/hotels.json --bookings data/bookings.json
 ## Development
 
 ### Setup
+
 1. Create a virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -72,6 +78,7 @@ myapp --hotels data/hotels.json --bookings data/bookings.json
    ```
 
 ### Running Tests
+
 To ensure all functionalities are working as expected, run the test suite:
 
 ```bash
@@ -109,51 +116,53 @@ hotel-reservation-system/
 ## Sample Data Files
 
 ### `hotels.json`
+
 ```json
 [
-    {
-        "id": "H1",
-        "name": "Hotel California",
-        "roomTypes": [
-            {
-                "code": "SGL",
-                "description": "Single Room",
-                "amenities": ["WiFi", "TV"],
-                "features": ["Non-smoking"]
-            },
-            {
-                "code": "DBL",
-                "description": "Double Room",
-                "amenities": ["WiFi", "TV", "Minibar"],
-                "features": ["Non-smoking", "Sea View"]
-            }
-        ],
-        "rooms": [
-            {"roomType": "SGL", "roomId": "101"},
-            {"roomType": "SGL", "roomId": "102"},
-            {"roomType": "DBL", "roomId": "201"},
-            {"roomType": "DBL", "roomId": "202"}
-        ]
-    }
+	{
+		"id": "H1",
+		"name": "Hotel California",
+		"roomTypes": [
+			{
+				"code": "SGL",
+				"description": "Single Room",
+				"amenities": ["WiFi", "TV"],
+				"features": ["Non-smoking"]
+			},
+			{
+				"code": "DBL",
+				"description": "Double Room",
+				"amenities": ["WiFi", "TV", "Minibar"],
+				"features": ["Non-smoking", "Sea View"]
+			}
+		],
+		"rooms": [
+			{ "roomType": "SGL", "roomId": "101" },
+			{ "roomType": "SGL", "roomId": "102" },
+			{ "roomType": "DBL", "roomId": "201" },
+			{ "roomType": "DBL", "roomId": "202" }
+		]
+	}
 ]
 ```
 
 ### `bookings.json`
+
 ```json
 [
-    {
-        "hotelId": "H1",
-        "arrival": "20240901",
-        "departure": "20240903",
-        "roomType": "DBL",
-        "roomRate": "Prepaid"
-    },
-    {
-        "hotelId": "H1",
-        "arrival": "20240902",
-        "departure": "20240905",
-        "roomType": "SGL",
-        "roomRate": "Standard"
-    }
+	{
+		"hotelId": "H1",
+		"arrival": "20240901",
+		"departure": "20240903",
+		"roomType": "DBL",
+		"roomRate": "Prepaid"
+	},
+	{
+		"hotelId": "H1",
+		"arrival": "20240902",
+		"departure": "20240905",
+		"roomType": "SGL",
+		"roomRate": "Standard"
+	}
 ]
 ```
